@@ -1,0 +1,40 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.main_part{
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(
+      rgba(0,0,0,0.4),rgba(0,0,0,0.4)
+      ),
+  url(images/street_road.img);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.truck_moving{
+  width: 500px;
+  height: 500px;
+  background-image:url(images/truck.png);
+  animation: truck 3.2s linear infinite ;
+  /* animation-direction:alternate-reverse; */
+  animation-fill-mode:forwards;
+  filter: drop-shadow(10px 7px 12px gray );
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+
+@keyframes truck{
+  0%{
+    transform: rotateX(20deg);
+     translate: 0% ; 
+  }
+  100%{
+      scale: 2;
+      translate: 50%;
+      translate:calc(100vw - 200px);
+  }
+} 
